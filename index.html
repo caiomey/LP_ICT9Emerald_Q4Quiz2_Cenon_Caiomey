@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCORE ANALYZER</title>
+
+    <style>
+        
+h1 {background-color: #19a6b8; text-align: center; color: whitesmoke;}
+
+body {background-color: #e9fafc}
+
+details {text-align: center;}
+
+.center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; 
+    }
+
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+
+
+    </style>
+
+</head>
+
+<body> 
+
+<h1> 𝗦𝗖𝗢𝗥𝗘 𝗔𝗡𝗔𝗟𝗬𝗭𝗘𝗥 📑 </h1>
+
+   <details>
+
+        <summary>INSTRUCTIONS</summary>
+
+    <p> Enter your grades for the following subjects. </p>
+
+   </details>
+
+   <br>
+
+ 
+ <div style="display: grid; grid-template-columns: repeat(3, auto); gap: 5px;">
+
+  <img src="science.jpg" alt="Image 1" width="300">
+  <img src="math.jpg" alt="Image 2" width="300">
+  <img src="english.jpg" alt="Image 3" width="300">
+
+</div>
+
+<br> 
+
+<div style="display: flex;">
+  <div style="margin-right: 10px;">  <input type="number" id="gradeInput" placeholder="Enter grade (0–100)"> </div>
+ <div style="margin-right: 10px;">  <input type="number" id="gradeInput" placeholder="Enter grade (0–100)"> </div>
+  <div style="margin-right: 10px;">  <input type="number" id="gradeInput" placeholder="Enter grade (0–100)"> </div>
+ 
+</div>
+
+<br> 
+
+
+<button onclick ="checkGrade()" class="btn btn-success">Submit</button>
+
+<script>
+  function checkGrade() {
+    const grade = parseFloat(document.getElementById('gradeInput').value);
+
+    if (isNaN(grade)) {
+      alert("Please enter a valid number.");
+    } else if (grade >= 94 && grade <= 100) {
+      alert("Excellent");
+    } else if (grade >= 87 && grade <= 93.99) {
+      alert("Above Satisfactory");
+    } else if (grade >= 80 && grade <= 86.99) {
+      alert("Satisfactory");
+    } else if (grade >= 75 && grade <= 79.99) {
+      alert("Needs Improvement");
+    } else if (grade >= 70 && grade <= 74.99) {
+      alert("Poor");
+    } else {
+      alert("Grade out of range.");
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
